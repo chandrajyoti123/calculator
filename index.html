@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .calculator {
+            width: 350px;
+            background-color: #14191d;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 2px 3px 4px 2px #ccd0d1;
+        }
+
+        .cal-screen {
+            width: 330px;
+            height: 140px;
+            background-color: #d6e1e4;
+            margin-left: 6px;
+            /* margin-right: auto; */
+            /* margin-top: 10px; */
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #101213;
+            box-shadow: 2px 2px 2px #101213;
+        }
+
+        .calc-row {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .calc-row-items {
+            background-color: #4d4a52;
+            width: 50px;
+            /* height: 30px; */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-end-start-radius: 10px;
+            border-end-end-radius: 10px;
+            font-size: 13px;
+            text-align: center;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            color: #e2e4e5;
+            box-shadow: 2px 2px 2px #101213;
+        }
+
+        .calc-row-1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .calc-row-items-1 {
+            width: 60px;
+            height: 35px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-end-start-radius: 10px;
+            border-end-end-radius: 10px;
+            text-align: center;
+            font-size: 25px;
+            padding: auto;
+            background-color: #272831;
+            color: #e2e4e5;
+            /* border-top: 0.1px solid #e2e4e5 ; */
+            box-shadow: 1px 1px 1px 1px #101213;
+        }
+
+        .calc-row-2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .calc-row-items-2 {
+            /* background-color: #7e3838; */
+            width: 60px;
+            height: 15px;
+            font-size: 10px;
+            padding-top: 3px;
+        }
+
+        .calc-row-3 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .calc-row-items-3 {
+            /* background-color: #7e3838; */
+            width: 50px;
+            height: 15px;
+            font-size: 10px;
+            padding-top: 3px;
+        }
+
+        .img {
+            width: 900px;
+            margin-left: 150px;
+            margin-top: 40px;
+        }
+
+        .purple {
+            color: #7062ab;
+        }
+
+        .yellow {
+            color: #f8c02e;
+        }
+
+        .right {
+            margin-left: 27px;
+        }
+
+        .right-2 {
+            margin-left: 5px;
+        }
+
+        .right-3 {
+            margin-left: 23px;
+        }
+
+        .right-4 {
+            margin-left: 21px;
+        }
+
+        .right-5 {
+            margin-left: 26px;
+        }
+
+        .right-6 {
+            margin-left: 21px;
+        }
+
+        .right-7 {
+            margin-left: 9px;
+        }
+
+        .right-8 {
+            margin-left: 35px;
+        }
+
+        .left-8 {
+            margin-left: 6px;
+        }
+
+        .right-11 {
+            margin-left: 9px;
+        }
+
+        .right-12 {
+            margin-left: 21px;
+        }
+
+        .right-13 {
+            margin-left: 22px;
+        }
+
+        .right-14 {
+            margin-left: 17px;
+        }
+
+        .right-15 {
+            margin-left: 30px;
+        }
+
+        .right-16 {
+            margin-left: 15px;
+        }
+
+        .right-17 {
+            margin-left: 23px;
+        }
+
+        .right-18 {
+            margin-left: 16px;
+        }
+
+        .right-19 {
+            margin-left: 15px;
+        }
+
+        .right-20 {
+            margin-left: 14px;
+        }
+
+        .right-21 {
+            margin-left: 4px;
+        }
+
+        .right-22 {
+            margin-left: 25px;
+        }
+
+        .right-23 {
+            margin-left: 14px;
+        }
+
+        .right-24 {
+            margin-left: 35px;
+        }
+
+        .right-25 {
+            margin-left: 22px;
+        }
+
+        .right-26 {
+            margin-left: 24px;
+        }
+
+        .yellow-2 {
+            background-color: #f8c02e;
+            color: black;
+        }
+
+        .purple-2 {
+            background-color: #7062ab;
+        }
+
+        .yellow-1 {
+            background-color: #e88d4f;
+            color: black;
+        }
+
+        .text-align {
+            text-align: center;
+        }
+
+        .margin-bottom {
+            padding-bottom: 15px;
+        }
+
+        .heading {
+            display: flex;
+
+        }
+
+        .heading-item {
+            color: #e2e4e5;
+            margin-left: 9px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class=" heading">
+            <span class="heading-item">NORM</span>
+            <span class="heading-item">MATH</span>
+            <span class="heading-item">DECI</span>
+        </div>
+        <input type="text" class="cal-screen">
+        <div class="calc-row">
+            <div class="calc-row-items yellow-2"> SHIFT </div>
+            <div class="calc-row-items purple-2">ALPFA</div>
+            <div class="calc-row-items ">&#8592</div>
+            <div class="calc-row-items ">&#8594</div>
+            <div class="calc-row-items">MODE</div>
+            <div class="calc-row-items">2nd</div>
+        </div>
+        <div class="calc-row-3">
+            <div class="calc-row-items-3"><span class="yellow left-11 ">SOLVE</span> <span
+                    class="purple right-11">=</span></div>
+            <div class="calc-row-items-3"><span class="yellow letf-12">d/dx</span> <span
+                    class="purple right-12">:</span></div>
+            <div class="calc-row-items-3"></div>
+            <div class="calc-row-items-3"></div>
+            <div class="calc-row-items-3 text-align "><span class="yellow">x!</span></div>
+            <div class="calc-row-items-3 "><span class="yellow letf-13">&#8721</span> <span
+                    class="purple right-13">&#8719</span></div>
+        </div>
+
+        <div class="calc-row">
+            <div class="calc-row-items">CALC</div>
+            <div class="calc-row-items">dx</div>
+            <div class="calc-row-items">&#9650;</div>
+            <div class="calc-row-items">&#9660;</div>
+            <div class="calc-row-items">x <sup>-1</sup></div>
+            <div class="calc-row-items">Log <sub>a</sub>x</div>
+
+        </div>
+        <div class="calc-row-3">
+            <div class="calc-row-items-3"><span class="yellow left-14">mod</span> <span
+                    class="purple right-14">-R</span></div>
+            <div class="calc-row-items-3 text-align"><span class="yellow">&#8731;</span></div>
+            <div class="calc-row-items-3 text-align"><span class="yellow">x <sup>3</sup></span></div>
+            <div class="calc-row-items-3 text-align"><span class="yellow">&#8730;</span></div>
+            <div class="calc-row-items-3 text-align"><span class="yellow">10 <sup>x</sup></span></div>
+            <div class="calc-row-items-3 text-align"><span class="yellow">e <sup>1</sup></span></div>
+        </div>
+        <div class="calc-row">
+            <div class="calc-row-items div">-</div>
+            <div class="calc-row-items">&#8730;</div>
+            <div class="calc-row-items">x <sup>2</sup></div>
+            <div class="calc-row-items">x <sup>1</sup></div>
+            <div class="calc-row-items">Log </div>
+            <div class="calc-row-items">Ln</div>
+        </div>
+        <div class="calc-row-3">
+            <div class="calc-row-items-3"><span class="yellow letf-15 ">&#8736;</span> <span
+                    class="purple right-15">a</span></div>
+            <div class="calc-row-items-3"><span class="yellow letf-16">FACT</span> <span
+                    class="purple right-16">b</span></div>
+            <div class="calc-row-items-3"><span class="yellow letf-17">Abs</span> <span class="purple right-17">c</span>
+            </div>
+            <div class="calc-row-items-3"><span class="yellow letf-18">Sin <sup>-1</sup></span> <span
+                    class="purple right-18">d</span>
+            </div>
+            <div class="calc-row-items-3"><span class="yellow letf-19">Cos <sup>-1</sup></span> <span
+                    class="purple right-19">e</span>
+            </div>
+            <div class="calc-row-items-3"><span class="yellow letf-20">Tan <sup>-1</sup></span> <span
+                    class="purple  right-20">f</span>
+            </div>
+        </div>
+        <div class="calc-row">
+            <div class="calc-row-items">(-)</div>
+            <div class="calc-row-items">&deg; ' "</div>
+            <div class="calc-row-items">hyp</div>
+            <div class="calc-row-items">Sin</div>
+            <div class="calc-row-items">Cos</div>
+            <div class="calc-row-items">Tan</div>
+        </div>
+        <div class="calc-row-3">
+            <div class="calc-row-items-3"><span class="yellow letf-21">STO</span> <span
+                    class="purple right-21">ClVR</span></div>
+            <div class="calc-row-items-3"><span class="yellow letf-22">i</span> <span class="purple right-22">Cot</span>
+            </div>
+            <div class="calc-row-items-3"><span class="yellow letf-23">%</span> <span class="purple right-23">Cot
+                    <sup>-1</sup></span>
+            </div>
+            <div class="calc-row-items-3"><span class="yellow letf-24">,</span> <span class="purple right-24">x</span>
+            </div>
+            <div class="calc-row-items-3"><span class="yellow letf-25">a <sup>b/c</sup></span> <span
+                    class="purple right-25">y</span>
+            </div>
+            <div class="calc-row-items-3"><span class="yellow letf-26">M-</span> <span class="purple right-26">m</span>
+            </div>
+        </div>
+        <div class="calc-row">
+            <div class="calc-row-items">RCL</div>
+            <div class="calc-row-items">ENG</div>
+            <div class="calc-row-items"> &#8317;</div>
+            <div class="calc-row-items">&#8318;</div>
+            <div class="calc-row-items">S&#8644;D</div>
+            <div class="calc-row-items">M+</div>
+        </div>
+
+        <div class="calc-row-2">
+            <div class="calc-row-items-2 text-align"><span class="yellow ">CONST</span></div>
+            <div class="calc-row-items-2 text-align"><span class="yellow ">CONV</span></div>
+            <div class="calc-row-items-2"><span class="yellow left">Limit</span> <span
+                    class="purple right">&#8734;</span>
+            </div>
+            <div class="calc-row-items-2"></div>
+            <div class="calc-row-items-2 text-align"><span class="yellow ">CLR ALL</span></div>
+
+        </div>
+        <div class="calc-row-1">
+            <div class="calc-row-items-1">7</div>
+            <div class="calc-row-items-1">8</div>
+            <div class="calc-row-items-1">9</div>
+            <div class="calc-row-items-1 yellow-1">DEL</div>
+            <div class="calc-row-items-1 yellow-1">AC</div>
+
+        </div>
+        <div class="calc-row-2">
+            <div class="calc-row-items-2 text-align"><span class="yellow ">MATRIX</span></div>
+            <div class="calc-row-items-2 text-align"><span class="yellow ">VECTOR</span></div>
+            <div class="calc-row-items-2"><span class="yellow left-2">FUNC</span> <span
+                    class="purple right-2">HELP</span></div>
+            <div class="calc-row-items-2"><span class="yellow left-3">nPr</span><span class="purple right-3 ">GCD</span>
+            </div>
+            <div class="calc-row-items-2"><span class="yellow left-4">nCr</span><span class="purple right-4">LCM</span>
+            </div>
+
+        </div>
+        <div class="calc-row-1">
+            <div class="calc-row-items-1">4</div>
+            <div class="calc-row-items-1">5</div>
+            <div class="calc-row-items-1">6</div>
+            <div class="calc-row-items-1">&#215;</div>
+            <div class="calc-row-items-1">&#247;</div>
+
+        </div>
+        <div class="calc-row-2">
+            <div class="calc-row-items-2 text-align"><span class="yellow ">STAT</span></div>
+            <div class="calc-row-items-2 text-align"><span class="yellow ">CMPLX</span></div>
+            <div class="calc-row-items-2 text-align"><span class="yellow ">DISTER</span></div>
+            <div class="calc-row-items-2"><span class="yellow left-5">pol</span> <span
+                    class="purple right-5">Ceil</span></div>
+            <div class="calc-row-items-2"><span class="yellow left-6">Rec</span><span
+                    class="purple right-6">Floor</span></div>
+
+        </div>
+        <div class="calc-row-1">
+            <div class="calc-row-items-1">1</div>
+            <div class="calc-row-items-1">2</div>
+            <div class="calc-row-items-1">3</div>
+            <div class="calc-row-items-1">&#43;</div>
+            <div class="calc-row-items-1">&#8722;</div>
+
+        </div>
+        <div class="calc-row-2">
+            <div class="calc-row-items-2"><span class="yellow">COPY</span> <span class="purple">PASTE</span></div>
+            <div class="calc-row-items-2"> <span class="yellow letf-7">Ran#</span> <span
+                    class="purple right-7">RanInt</span></div>
+            <div class="calc-row-items-2"><span class="yellow left-8">&#960;</span> <span
+                    class="purple right-8">e</span>
+            </div>
+            <div class="calc-row-items-2 text-align"><span class="purple ">PreAns</span></div>
+            <div class="calc-row-items-2 text-align"><span class="yellow ">History</span></div>
+
+        </div>
+        <div class="calc-row-1 margin-bottom">
+            <div class="calc-row-items-1">0</div>
+            <div class="calc-row-items-1">&#8729;</div>
+            <div class="calc-row-items-1">Exp</div>
+            <div class="calc-row-items-1">Ans</div>
+            <div class="calc-row-items-1">=</div>
+        </div>
+    </div>
+  </body>
+  </html>
